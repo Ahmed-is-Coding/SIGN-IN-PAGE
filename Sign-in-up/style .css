@@ -1,0 +1,234 @@
+
+html{
+    font-size: 15px;
+}
+
+*{
+    box-sizing: border-box;
+   
+}
+
+body{
+
+    height:100%;
+    font: 1.6rem Arial;
+    margin: 0;
+    background-color: #fdf8f5;  
+}
+
+  
+
+/* sign in page*/
+
+.signin-body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    font-size: 25px;
+    background-color: #7e89a0;
+}
+
+input{
+  background-color: black;
+}
+
+.forma input {
+  min-width: 400px;
+  display: block;
+  margin: 20px;
+  padding: 15px 20px;
+  background-color: #ece7e7;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 15px 15px 25px #a8a8a8;
+  transition: box-shadow 0.5s;
+}
+
+.forma input:focus {
+  box-shadow: 5px 5px 15px #a8a8a8;
+}
+
+.forma .btn:hover {
+  box-shadow: 5px 5px 15px #aaa;
+}
+
+.forma .btn {
+  margin: auto;
+  padding: 10px 35px;
+  background-color: #f1a566;
+  color: #fff;
+  border: none;
+  font-size: 22px;
+  border-radius: 10px;
+  box-shadow: 15px 15px 20px #a8a8a8;
+  transition: box-shadow 0.5s;
+  outline: none;
+}
+
+
+#csign-up{
+
+  margin-left:20px ;
+}
+
+.sectionLeft .forma {
+  float: left;
+  margin: 35vh auto;
+}
+
+.forma {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  bottom: 0px;
+  font-size: 35px;
+}
+
+.sectionRight .forma {
+  float: right;
+  margin: 30vh auto;
+  right: 0;
+}
+
+.frame .reload-btn:hover {
+  box-shadow: 5px 5px 15px #aaa;
+}
+
+.sectionLeft .frame {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.frame .reload-btn {
+  position: absolute;
+  bottom: 0;
+  font-size: 25px;
+  margin: 40vh auto;
+  padding: 10px 55px;
+  background-color: #f1a566;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 15px 15px 25px #a8a8a8;
+  transition: box-shadow 0.5s;
+  outline: none;
+}
+
+.sectionLeft .frame {
+  height: 100vh;
+  width: 50vw;
+}
+
+.sectionLeft .frame h1 {
+  position: absolute;
+  bottom: 0;
+  margin: 60vh auto;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+.sectionLeft .afterhide {
+  visibility: hidden;
+}
+
+.sectionLeft .hide-forma {
+  visibility: hidden;
+}
+.sectionRight .frame h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 50vh auto;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  align-items: right;
+}
+
+.sectionRight .frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  float: right;
+  right: 0;
+  
+}
+.sectionLeft .frame h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 50vh auto;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
+.sectionRight .frame  {
+  height: 100vh;
+  width: 50vw;
+}
+
+.sectionRight .frame h1 {
+  position: absolute;
+  bottom: 0;
+  margin: 60vh auto;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  align-items: right;
+}
+
+.sectionRight .afterhide {
+  visibility: hidden;
+}
+
+.sectionRight .hide-forma {
+  visibility: hidden;
+}
+
+.change-fade {
+  animation-name: change-fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#checkboxdiv{
+ border: 1px solid #e09957;
+  display: flex;
+  background-color: #eee;
+  height: 4rem;
+  width: 26.6rem;
+  margin-left: 20px;
+ 
+}
+
+#checkboxinput{
+  margin: 2rem;
+ padding: 1em;
+ height: 1.5rem;
+ margin-top: 8px;
+  margin-left: -12rem;
+ box-shadow: none;
+ box-sizing: none;
+}
+
+#checkbox-p{
+font-size: 20px;
+text-align: left;
+margin-left: -14rem;
+margin-top: 7px;
+
+}
+
+@keyframes change-fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+

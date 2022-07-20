@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="style .css"/>
+    <title>sign-in</title> 
+</head>
+
+<body>  
+   
+            <!-- START -->
+            
+    <section class="sectionLeft">
+       
+        <div id="divLeft2" class="forma change-fade">
+            <h1 >Log-in</h1>
+            
+            <input type="text" name="user-name" class="input-box" placeholder="User Name" id="user">
+            <input type="password" name="user-pass" class="input-box" placeholder="Password" id="pass">
+
+            <input type="button" id="log-in"  name="login-btn" class="btn"  value="Log in" style="cursor:pointer; ">
+
+        </div>
+    </section>
+
+    <section class="sectionRight">
+    
+        <div id="diveRight2" class="forma ">
+
+            <h2>Create your Account</h2>
+        
+            <input type="text"  id="new-user" class="input-box" placeholder=" New User Name">
+            <input type="password"  id="new-pass" class="input-box" placeholder=" New Password"> 
+              
+            <input id="sign-up" type="button"  class="btn"  value="Sign up" style="cursor:pointer ;">
+        </div>
+
+    </section>
+
+  <script >
+
+
+    var dataBase=[]
+        dataBase.toString();
+
+    let signInButn = document.getElementById("log-in").addEventListener("click",singIn);
+   
+ function singIn(){
+    
+    let signed="signed-in";
+    let tryagin = "Try again";
+    
+    var changebtn = document.getElementById("log-in")
+
+    if (dataBase.indexOf(document.getElementById("user").value) >= 0  && dataBase.indexOf(document.getElementById("pass").value) >= 0  ){
+
+        changebtn.value = signed;
+        document.getElementById("user").style.border ="2px solid green";
+        document.getElementById("pass").style.border ="2px solid green";
+    
+    }
+
+    else {
+
+        changebtn.value = tryagin;
+        document.getElementById("user").style.border ="2px solid red";
+        document.getElementById("pass").style.border ="2px solid red";
+        alert("Unknown username or wrong password please try again!")
+    }
+       
+}
+    var signUp = document.getElementById("sign-up").addEventListener("click", signUp)
+
+    function signUp(){
+
+        var newUser = document.getElementById("new-user");
+        var newPass = document.getElementById("new-pass");
+
+    
+
+        if(dataBase.indexOf(newUser.value) >= 0 || dataBase.indexOf(newPass.value) >= 0){
+
+        document.getElementById("sign-up").value = "try again";
+        document.getElementById("new-user").style.border ="2px solid red";
+        document.getElementById("new-pass").style.border ="2px solid red";
+
+                alert("Already exist")
+                return(false)
+}
+
+    const userRule =/[a-z]/g;
+    const passRule = /[a-z]/g;
+
+   if(newUser.value.match(userRule)  && newPass.value.match(passRule) ){
+
+        document.getElementById("sign-up").value = "signed";
+        document.getElementById("new-user").style.border ="2px solid green";
+        document.getElementById("new-pass").style.border ="2px solid green";
+
+        dataBase.push(newUser.value,newPass.value);
+        
+        console.log(dataBase)
+        return(true)
+    }
+
+    else{
+
+        document.getElementById("sign-up").value = "try again";
+        document.getElementById("new-user").style.border ="2px solid red";
+        document.getElementById("new-pass").style.border ="2px solid red";
+        return(false)
+    }
+
+    
+}
+
+  </script>
+  
+
+</body>
+
+
+</html>
